@@ -1,4 +1,4 @@
-package edu.makoto.examples.taskscheduling.task
+package edu.makoto.examples.caching.taskscheduling.task
 
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Component

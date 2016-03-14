@@ -1,4 +1,4 @@
-package edu.makoto.examples.taskscheduling
+package edu.makoto.examples.caching.taskscheduling
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
