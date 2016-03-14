@@ -1,8 +1,15 @@
 package edu.cmsandiga.examples.caching
 
-/**
-  * Created by makoto on 13/03/16.
-  */
+import org.springframework.cache.annotation.Cacheable
+import org.springframework.stereotype.Service
+
+@Service
 class MyService {
+
+  @Cacheable(cacheNames = Array("hosts"))
+  def webserviceCall(): String = {
+    println("Calling from Service")
+    "hello world"
+  }
 
 }

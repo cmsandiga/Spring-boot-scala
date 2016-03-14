@@ -1,8 +1,21 @@
 package edu.cmsandiga.examples.caching
 
-/**
-  * Created by makoto on 13/03/16.
-  */
+import java.util.concurrent.TimeUnit
+
+import com.google.common.cache.CacheBuilder
+import org.springframework.cache.guava.GuavaCacheManager
+import org.springframework.context.annotation.{Bean, Configuration}
+
+@Configuration
 class GuavaConfiguration {
+
+  @Bean
+  def guavaCache() ={
+    val cacheManager = new GuavaCacheManager()
+    cacheManager.setCacheBuilder(
+      CacheBuilder.newBuilder().expireAfterWrite(5, TimeUnit.SECONDS).maximumSize(100)
+    )
+    cacheManager
+  }
 
 }

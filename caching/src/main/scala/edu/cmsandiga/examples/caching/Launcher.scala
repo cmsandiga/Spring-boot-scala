@@ -1,8 +1,16 @@
 package edu.cmsandiga.examples.caching
 
-/**
-  * Created by makoto on 13/03/16.
-  */
-class Launcher {
+import org.springframework.boot.SpringApplication
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.cache.annotation.EnableCaching
+import org.springframework.scheduling.annotation.EnableScheduling
 
+@SpringBootApplication
+@EnableCaching
+@EnableScheduling
+class Launcher
+
+
+object Launcher extends App{
+  SpringApplication.run(classOf[Launcher])
 }

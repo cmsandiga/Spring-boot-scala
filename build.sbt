@@ -19,9 +19,14 @@ lazy val tasksheduling = project.in(file("tasksheduling")).settings(
   )
 )
 
+lazy val caching = project.in(file("caching")).settings(
+  libraryDependencies ++= Seq(
+    "org.springframework.boot" % "spring-boot-starter" % "1.3.3.RELEASE",
+    "org.springframework.boot" % "spring-boot-starter-cache" % "1.3.3.RELEASE",
+    "com.google.guava" % "guava" % "18.0"
 
-
-
+  )
+)
 
 
 
