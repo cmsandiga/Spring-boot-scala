@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component
 class TaskScheduler {
 
   @Scheduled(cron = "* * * * * *")
-  def init(): Unit ={
+  def init(): Unit = {
     println("Hello world")
   }
 }
